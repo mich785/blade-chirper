@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use  App\Http\Controllers\ChirpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,5 @@ Route::middleware('auth')->group(function () {
 Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']);
-    
+
 require __DIR__.'/auth.php';
